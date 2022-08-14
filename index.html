@@ -7,16 +7,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binary Seconds</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    <script src="sketch.js"></script>
-</head>
-<main>
+    <script src="lib/js/classes.js" defer></script>
+    <script src = "lib/js/script.js" defer></script>
+    <script src="lib/js/HMSmode.js" defer></script>
+    <script src="lib/js/lcd.js" defer></script>
+    <script src="sketch.js" defer></script>
 
-</main>
-<h4>Switch Modes:</h4>
-<input type="button" onclick={handleModeChange()} value="x"></input>
+
+    <link rel="stylesheet" href="lib/css/style.css">
+
+</head>
 
 <body>
-    <p>Hey</p>
+    <nav id="navbar">
+        <a href="https://bryang229.com">
+            <img id="logo" alt="logo" src="/lib/media/logo.png" /></a>
+
+    </nav>
+    <h1>
+        Welcome to the demo of my clock !
+    </h1>
+
+    <main>
+
+    </main>
+    <h4>Switch Modes: <b id="modes"></b></h4>
+    <input type="button" onclick={handleModeChange()} value="x"></input>
+
+    <div id="desc">
+        <p>
+            This is a simple website show casing the features of the clock I designed during my partipation
+            during the Hardware Product Sprint program by Google. <br>
+            Below is a short explaination of the features! <br>
+            Fun fact: This website was originally created to test out the display features for my clock before wiring
+            everything up and working it out in C++.
+        </p>
+        <ul id="modeDes">
+            <li>
+                Binary Mode
+                <ul>
+                    <li>
+                        This shows the current seconds in a binary fashion!</br>
+                        Seconds (0-59) are shown as a 6 bit number !
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Decimal Mode
+                <ul>
+                    <li>
+                        This shows the current seconds in a nicely formated way on the 8x8 display! </br>
+                        Much props to the <a target="_blank"
+                            href="https://forum.arduino.cc/t/solved-how-to-convert-string-to-8x8-dot-matrix-bytes/515440/9">
+                            Arduino community </a>
+                        for getting this style out there :)
+                </ul>
+            </li>
+            <li>
+                Hour Minutes Seconds Mode
+                <ul>
+                    <li>
+                        This shows the current time in a binary fashion!</br>
+                        - Hours (1 - 12) are shown as a 4 bit number on the top row </br>
+                        - Minutes (0-59) are shown as a 6 bit number on the middle row</br>
+                        - Seconds (0-59) are shown as a 6 bit number on the bottom row
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3>
+        Here are some images of some of my proto types!
+    </h3>
+    <div id="protos">
+        <div id="proto1" class="protos">
+            <h4>Clock Cardboard V1</h4>
+            <hr>
+            <img id="proto1Img" src="lib/media/Clock Proto.png">
+            <p>
+                This is a Cardboard version of my Clock, the PCB is soon to come and images will be added ! <br>
+                An Arduino is used to control the 8x8 Modules, LCD modules and tracks input through the Rotary Encoder
+                (On top). <br>
+                It uses a RTC Module to keep track of real time !
+            </p>
+        </div>
+        <!-- https://cad.onshape.com/documents/111f8e69b948af05193efa10/w/d5e9094ec17c830d38fe21ed/e/e0e3d717e3d1f2f238ff5153 -->
+        <div id="proto2" class="protos">
+            <h4>Clock PCB Fit Check</h4>
+            <hr>
+            <img id="proto2Img" src="lib/media/Clock Fit Check.png">
+            <p>
+                This is the Fit Check Provided to me by one of the Coaches at the Hardware Spring Program (Matthew a
+                real Goat!)<br>
+                This Fit Check shows the basics of the clock and how it would look like in real life. The 3D Model of
+                the PCB was generated through KiCAD. <br>
+                You can check it out <a target="_blank"
+                    href="https://cad.onshape.com/documents/111f8e69b948af05193efa10/w/d5e9094ec17c830d38fe21ed/e/e0e3d717e3d1f2f238ff5153">here!</a><br>
+                Be wary onshape is heavy on your computer!
+            </p>
+        </div>
+        <div id="proto3" class="protos">
+            <h4 id="header0">Clock PCB Front Raytracing</h4>
+            <h4 id="header1">Clock PCB Back Raytracing</h4>
+            <hr>
+            <div class="imgChanger">
+                <div id="prev">Previous</div>
+                <img id="img0"
+                    src="https://github.com/bryang229/HPS-Work/blob/main/Clock%20CAD%20&%20Code/Clock/Clock%20raytracing.jpg?raw=true">
+                    <img id="img1"
+                    src="https://github.com/bryang229/HPS-Work/blob/main/Clock%20CAD%20&%20Code/Clock/Clock%20backside%20raytracing.jpg?raw=true">                
+                    <div id="next">Next</div>
+            </div>
+            <p id = "option0">
+                This is the Front of my PCB design! <br>
+                Here you can see the 8x8 Display shown here in action! (As well as the LCD) <br>
+                Included as well are the AT Mega, two MAX7219 (for the 8x8 displays) as well as the IC for the RTC Module! <br>
+                You can also see the Rotary Encoder, the linear voltage regulator and my 16 MHz clock for the AT Mega! <br>
+                The Clock is front has the letters ABC (for my family) as well as a quote of Dare Greatly! A message from All Star Code(ASC) I very much take to.
+            </p>
+            <p id = "option1">
+                This is the Back of my PCB design! <br>
+                Here you can see the two power supplies for my PCB, the 3V battery for the RTC as well as the power jack on the bottom left! <br>
+                You can also see a few logos, the NBA HTML and JS PS are for the two cohorts I worked as a Teaching Assistant for during ASC SI 2021
+            </p>
+        </div>
+        <div id="proto4" class="protos">
+            <h4 id="head0">Napkin Sketch</h4>
+            <h4 id="head1">Block Diagram v1</h4>
+            <h4 id="head2">Human Machine Interface (HMI) v1</h4>
+            <h4 id="head3">Block Diagram v2</h4>
+            <h4 id="head4">HMI v2</h4>
+
+            <hr>
+            <div class="imgChanger">
+                <div id="prev1">Previous</div>
+                <img id="image0" src="/lib/media/napkin sketch.png">
+                <img id="image1" src="/lib/media/block v1.png">
+                <img id="image2" src="/lib/media/hmi v1.png">
+                <img id="image3" src="/lib/media/block v2.png">
+                <img id="image4" src="/lib/media/hmi v2.png">
+                
+                <div id="next1">Next</div>
+            </div>
+            <p id = "opt0">
+               This is the simple napkin sketch that started it all! <br>
+               The oringal idea was to use a few 7 Seg Displays to show the time. <br>
+               The LCD module and Rotary Encoder were always apart of the plan. <br>
+               I also thought of sensor for temperature but decided against it.
+            </p>
+            <p id = "opt1">
+                This is the first block design of my block! <br>
+                Planning out how the parts in my clock would be linked together! <br>
+                Version 2 looks a bit different!
+            </p>
+            <p id="opt2">
+                This is the Human-Machine Interface (Version 1) of my Clock! <br>
+                I originally planned to have two inputs, one for changine time and date as well as one changing the temp mode to Cº to Fº <br>
+                3 Seven Segement displays were originally the idea.
+            </p>
+            <p id="opt3">
+                This is the Second version of my Block diagram <br>
+                As you can see I removed the Seven segement displays in favor for two 8x8 displays! <br>
+                I've abstracted the ICs that would control this such as the MAX7219 or the RTC IC.
+            </p>
+            <p id="opt4">
+                This is the Second verison of my HMI <br>
+                As you can see it looks pretty familar at this point !
+            </p>
+        </div>
+    </div>
 
 </body>
 
