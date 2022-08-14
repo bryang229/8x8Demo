@@ -40,7 +40,7 @@ canvas{
 
 }
 .protos{
-    width: 32%;
+    width: 33%;
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -60,7 +60,7 @@ canvas{
     opacity: .1;
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 1000px){
     #protos{
         display:flex;
         flex-direction:column;
