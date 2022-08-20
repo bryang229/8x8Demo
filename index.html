@@ -8,7 +8,7 @@
     <title>Binary Seconds</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
     <script src="lib/js/classes.js" defer></script>
-    <script src = "lib/js/script.js" defer></script>
+    <script src="lib/js/script.js" defer></script>
     <script src="lib/js/HMSmode.js" defer></script>
     <script src="lib/js/lcd.js" defer></script>
     <script src="sketch.js" defer></script>
@@ -21,7 +21,7 @@
 <body>
     <nav id="navbar">
         <a href="https://bryang229.com">
-            <img id="logo" alt="logo"  src="https://i.ibb.co/pn4svJk/logo.png"></a>
+            <img id="logo" alt="logo" src="https://i.ibb.co/pn4svJk/logo.png"></a>
 
     </nav>
     <h1>
@@ -77,68 +77,19 @@
         </ul>
     </div>
     <h3>
-        Here are some images of some of my proto types!
+        Here's the progression of my Clock!
     </h3>
     <div id="protos">
-        <div id="proto1" class="protos">
-            <h4>Clock Cardboard V1</h4>
-            <hr>
-            <img id="proto1Img" src="https://i.ibb.co/4MtX09z/Clock-Proto.png">
-            <p>
-                This is a Cardboard version of my Clock, the PCB is soon to come and images will be added ! <br>
-                An Arduino is used to control the 8x8 Modules, LCD modules and tracks input through the Rotary Encoder
-                (On top). <br>
-                It uses a RTC Module to keep track of real time !
-            </p>
-        </div>
-        <!-- https://cad.onshape.com/documents/111f8e69b948af05193efa10/w/d5e9094ec17c830d38fe21ed/e/e0e3d717e3d1f2f238ff5153 -->
-        <div id="proto2" class="protos">
-            <h4>Clock PCB Fit Check</h4>
-            <hr>
-            <img id="proto2Img" src="https://i.ibb.co/GxPkvG4/Clock-Fit-Check.png">
-            <p>
-                This is the Fit Check Provided to me by one of the Coaches at the Hardware Spring Program (Matthew a
-                real Goat!)<br>
-                This Fit Check shows the basics of the clock and how it would look like in real life. The 3D Model of
-                the PCB was generated through KiCAD. <br>
-                You can check it out <a target="_blank"
-                    href="https://cad.onshape.com/documents/111f8e69b948af05193efa10/w/d5e9094ec17c830d38fe21ed/e/e0e3d717e3d1f2f238ff5153">here!</a><br>
-                Be wary onshape is heavy on your computer!
-            </p>
-        </div>
-        <div id="proto3" class="protos">
-            <h4 id="header0">Clock PCB Front Raytracing</h4>
-            <h4 id="header1">Clock PCB Back Raytracing</h4>
-            <hr>
-            <div class="imgChanger">
-                <div id="prev">Previous</div>
-                <img id="img0"
-                    src="https://github.com/bryang229/HPS-Work/blob/main/Clock%20CAD%20&%20Code/Clock/Clock%20raytracing.jpg?raw=true">
-                    <img id="img1"
-                    src="https://github.com/bryang229/HPS-Work/blob/main/Clock%20CAD%20&%20Code/Clock/Clock%20backside%20raytracing.jpg?raw=true">                
-                    <div id="next">Next</div>
-            </div>
-            <p id = "option0">
-                This is the Front of my PCB design! <br>
-                Here you can see the 8x8 Display shown here in action! (As well as the LCD) <br>
-                Included as well are the AT Mega, two MAX7219 (for the 8x8 displays) as well as the IC for the RTC Module! <br>
-                You can also see the Rotary Encoder, the linear voltage regulator and my 16 MHz clock for the AT Mega! <br>
-                The Clock is front has the letters ABC (for my family) as well as a quote of Dare Greatly! A message from All Star Code(ASC) I very much take to.
-            </p>
-            <p id = "option1">
-                This is the Back of my PCB design! <br>
-                Here you can see the two power supplies for my PCB, the 3V battery for the RTC as well as the power jack on the bottom left! <br>
-                You can also see a few logos, the NBA HTML and JS PS are for the two cohorts I worked as a Teaching Assistant for during ASC SI 2021
-            </p>
-        </div>
-        <div id="proto4" class="protos">
-            <h4 id="head0">Napkin Sketch</h4>
-            <h4 id="head1">Block Diagram v1</h4>
-            <h4 id="head2">Human Machine Interface (HMI) v1</h4>
-            <h4 id="head3">Block Diagram v2</h4>
-            <h4 id="head4">HMI v2</h4>
 
-<!-- 
+        <div id="proto4" class="protos">
+            <div class="headers">
+                <h4 id="head0">Napkin Sketch</h4>
+                <h4 id="head1">Block Diagram v1</h4>
+                <h4 id="head2">Human Machine Interface (HMI) v1</h4>
+                <h4 id="head3">Block Diagram v2</h4>
+                <h4 id="head4">HMI v2</h4>
+
+                <!-- 
 <a href="https://ibb.co/71LZMXc"><img src="https://i.ibb.co/2kHCVy2/blockv1.png" alt="blockv1" border="0"></a>
 <a href="https://ibb.co/Jk4K5hv"><img src="https://i.ibb.co/KykXF12/blockv2.png" alt="blockv2" border="0"></a>
 <a href="https://ibb.co/f10tYZz"><img src="https://i.ibb.co/GxPkvG4/Clock-Fit-Check.png" alt="Clock-Fit-Check" border="0"></a>
@@ -147,33 +98,36 @@
 <a href="https://ibb.co/h14Bksj"><img src="https://i.ibb.co/WpMkQnw/hmiv2.png" alt="hmiv2" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/pn4svJk/logo.png" alt="logo" border="0"></a>
 <a href="https://ibb.co/b1HcDfL"><img src="https://i.ibb.co/xhmxd4G/napkin-Sketch.png" alt="napkin-Sketch" border="0"></a>
- -->
+-->
 
-            <hr>
+                <hr>
+            </div>
+            <div class="info">
             <div class="imgChanger">
                 <div id="prev1">Previous</div>
                 <img id="image0" src="https://i.ibb.co/xhmxd4G/napkin-Sketch.png">
                 <img id="image1" src="https://i.ibb.co/2kHCVy2/blockv1.png">
-                <img id="image2"  src="https://i.ibb.co/k2j1Ty0/hmiv1.png">
+                <img id="image2" src="https://i.ibb.co/k2j1Ty0/hmiv1.png">
                 <img id="image3" src="https://i.ibb.co/KykXF12/blockv2.png">
                 <img id="image4" src="https://i.ibb.co/WpMkQnw/hmiv2.png">
-                
+
                 <div id="next1">Next</div>
             </div>
-            <p id = "opt0">
-               This is the simple napkin sketch that started it all! <br>
-               The oringal idea was to use a few 7 Seg Displays to show the time. <br>
-               The LCD module and Rotary Encoder were always apart of the plan. <br>
-               I also thought of sensor for temperature but decided against it.
+            <p id="opt0">
+                This is the simple napkin sketch that started it all! <br>
+                The oringal idea was to use a few 7 Seg Displays to show the time. <br>
+                The LCD module and Rotary Encoder were always apart of the plan. <br>
+                I also thought of sensor for temperature but decided against it.
             </p>
-            <p id = "opt1">
+            <p id="opt1">
                 This is the first block design of my block! <br>
                 Planning out how the parts in my clock would be linked together! <br>
                 Version 2 looks a bit different!
             </p>
             <p id="opt2">
                 This is the Human-Machine Interface (Version 1) of my Clock! <br>
-                I originally planned to have two inputs, one for changine time and date as well as one changing the temp mode to Cº to Fº <br>
+                I originally planned to have two inputs, one for changine time and date as well as one changing the temp
+                mode to Cº to Fº <br>
                 3 Seven Segement displays were originally the idea.
             </p>
             <p id="opt3">
@@ -185,6 +139,192 @@
                 This is the Second verison of my HMI <br>
                 As you can see it looks pretty familar at this point !
             </p>
+            </div>
+        </div>
+        <div id="proto3" class="protos">
+            <div class="headers">
+
+                <h4 id="header0">Clock PCB Front Raytracing</h4>
+                <h4 id="header1">Clock PCB Back Raytracing</h4>
+                <hr>
+            </div>
+            <div class="info">
+
+            <div class="imgChanger">
+                <div id="prev">Previous</div>
+                <img id="img0"
+                    src="https://github.com/bryang229/HPS-Work/blob/main/Clock%20CAD%20&%20Code/Clock/Clock%20raytracing.jpg?raw=true">
+                <img id="img1"
+                    src="https://github.com/bryang229/HPS-Work/blob/main/Clock%20CAD%20&%20Code/Clock/Clock%20backside%20raytracing.jpg?raw=true">
+                <div id="next">Next</div>
+            </div>
+            <p id="option0">
+                This is the Front of my PCB design! <br>
+                Here you can see the 8x8 Display shown here in action! (As well as the LCD) <br>
+                Included as well are the AT Mega, two MAX7219 (for the 8x8 displays) as well as the IC for the RTC
+                Module!
+                <br>
+                You can also see the Rotary Encoder, the linear voltage regulator and my 16 MHz clock for the AT Mega!
+                <br>
+                The Clock is front has the letters ABC (for my family) as well as a quote of Dare Greatly! A message
+                from
+                All Star Code(ASC) I very much take to.
+            </p>
+            <p id="option1">
+                This is the Back of my PCB design! <br>
+                Here you can see the two power supplies for my PCB, the 3V battery for the RTC as well as the power jack
+                on
+                the bottom left! <br>
+                You can also see a few logos, the NBA HTML and JS PS are for the two cohorts I worked as a Teaching
+                Assistant for during ASC SI 2021
+            </p>
+            </div>
+        </div>
+        <div id="proto2" class="protos">
+            <div class="headers">
+                <h4>Clock PCB Fit Check</h4>
+
+                <hr>
+            </div>
+            <div class="info">
+
+            <img id="proto2Img" src="https://i.ibb.co/GxPkvG4/Clock-Fit-Check.png">
+            <p>
+                This is the Fit Check Provided to me by one of the Coaches at the Hardware Spring Program (Matthew a
+                real Goat!)<br>
+                This Fit Check shows the basics of the clock and how it would look like in real life. The 3D Model of
+                the PCB was generated through KiCAD. <br>
+                You can check it out <a target="_blank"
+                    href="https://cad.onshape.com/documents/111f8e69b948af05193efa10/w/d5e9094ec17c830d38fe21ed/e/e0e3d717e3d1f2f238ff5153">here!</a><br>
+                Be wary onshape is heavy on your computer!
+            </p>
+            </div>
+        </div>
+        <div id="proto1" class="protos">
+            <div class="headers">
+
+                <h4>Clock Cardboard V1</h4>
+
+                <hr>
+            </div>
+            <div class="info">
+            <img id="proto1Img" src="https://i.ibb.co/4MtX09z/Clock-Proto.png">
+            <p>
+                This is a Cardboard version of my Clock, the PCB is soon to come and images will be added ! <br>
+                An Arduino is used to control the 8x8 Modules, LCD modules and tracks input through the Rotary Encoder
+                (On top). <br>
+                It uses a RTC Module to keep track of real time !
+            </p>
+            </div>  
+        </div>
+
+        <div id="proto5" class="protos">
+            <div class="headers">
+
+                <h4 id="h0">Bring Up: PCB Front</h4>
+                <h4 id="h1">Bring Up: PCB Back</h4>
+                <h4 id="h2">Bring Up: Clock Front</h4>
+                <h4 id="h3">Bring Up: Clock Back</h4>
+
+                <!-- 
+        <a href="https://ibb.co/PGBbZJd"><img src="https://i.ibb.co/hFpnRrS/Clock-Back.jpg" alt="Clock-Back" border="0"></a>
+        <a href="https://ibb.co/PgLMZtg"><img src="https://i.ibb.co/gJ2dM6J/Clock-Front.jpg" alt="Clock-Front" border="0"></a>
+        <a href="https://ibb.co/f22V7Ng"><img src="https://i.ibb.co/SPPDpmj/PCB-Back.jpg" alt="PCB-Back" border="0"></a>
+        <a href="https://ibb.co/dp6T4kX"><img src="https://i.ibb.co/7pVftrB/PCB-Front.jpg" alt="PCB-Front" border="0"></a>
+         -->
+
+                <hr>
+            </div>
+            <div class="info">
+                <div class="imgChanger">
+                    <div id="prev2">Previous</div>
+                    <img id="im0" src="https://i.ibb.co/7pVftrB/PCB-Front.jpg" alt="PCB-Front">
+                    <img id="im1" src="https://i.ibb.co/SPPDpmj/PCB-Back.jpg" alt="PCB-Back">
+                    <img id="im2" src="https://i.ibb.co/gJ2dM6J/Clock-Front.jpg" alt="Clock-Front">
+                    <img id="im3" src="https://i.ibb.co/hFpnRrS/Clock-Back.jpg" alt="Clock-Back">
+
+                    <div id="next2">Next</div>
+                </div>
+                <p id="op0">
+                    This is the front of my PCB, here you can see all the traces I've designed on KiCad in Real Life,
+                    it's just beauty! <br>
+                    Please check out the Bring up: Clock Front portion of this section (by hitting next twice!) to see
+                    info on components!
+                </p>
+                <p id="op1">
+                    This is the back of my PCB, here you can see all the traces I've designed on KiCad in Real Life as
+                    well as a few designs :) <br>
+                    Please check out the Bring up: Clock Front portion of this section (by hitting next once!) to see
+                    info on components!
+                </p>
+                <div id="op2">
+                    This is the front of my clock. No ICs are inserted for safety when bringing up! <br>
+                    Below is the list of components on this clock!
+                    <ul>
+                        <li>
+                            ICs
+                            <ul>
+                                <li>
+                                    ATMEGA328-PU
+                                </li>
+                                <li>
+                                    MAX7219 <b>x2</b>
+                                </li>
+                                <li>
+                                    Real Time Clock IC (DS1307 DIP-8)
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Power:
+                            <uL>
+                                <li>
+                                    Power Jack input
+                                </li>
+                                <li>
+                                    Linear Voltage regulator (L7805 TO92)
+                                </li>
+                                <li>
+                                    3V Battary (for RTC)
+                                </li>
+                            </uL>
+
+                        </li>
+
+                        <li>
+                            Crystals
+                            <ul>
+                                <li>
+                                    16MHz
+                                </li>
+                                <li>
+                                    32.768 kHz
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Compoents:
+                            <ul>
+                                <li>
+                                    Rotary Encoder
+                                </li>
+                                <li>
+                                    LCD Module
+                                </li>
+                                <li>
+                                    8x8 Dot Matrix Display <b>x2</b>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <p id="op3">
+                    This is the back of my Clock <br>
+                    It is full of designs! I loved crafting this :) <br>
+                    Please check out the Bring up: Clock Front portion of this section (by hitting previous once!) to
+                    see info on components!
+                </p>
+            </div>
         </div>
     </div>
 

@@ -1,12 +1,13 @@
 body{
     padding: 0px;
+    background-color:#15d983; /* Nav color */
 }
 
 #navbar{
     width:100%;
     display:flex;
     justify-content: space-between;
-    background-color:#0f7173; /* Nav color */
+    background-color:#1583d9; /* Nav color */
 }
 #navbar img:hover, a:hover{
     opacity: 0.5;
@@ -37,7 +38,7 @@ canvas{
 
 #protos{
     display:flex;
-    flex-direction:row wrap;
+    flex-flow:row wrap;
     justify-content: space-around;
 }
 
@@ -74,4 +75,19 @@ canvas{
     .protos{
         width: 100%;
     }
+}
+
+ul{
+    text-align:left;
+    margin-left: 10%;
+}
+
+.info{
+    background-color:#FFC145;
+    padding-bottom: 100%;
+}
+
+.headers{
+    background-color:#CDE6F5;
+    padding:25px;
 }
